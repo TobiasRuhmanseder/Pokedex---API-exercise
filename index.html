@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="icon" type="image/x-icon" href="./img/pokedex_fiv.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="types.css">
+    <link rel="stylesheet" href="spinner.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="responsiv.css">
+    <script src="script.js"></script>
+    <script src="card.js"></script>
+    <script src="scroll.js"></script>
+    <script src="overlay.js"></script>
+
+</head>
+
+<body id="bodyId" onload="getPokemonData()">
+    <header>
+        <img src="img/pokedex_logo.png" alt="">
+        <input id="inputId" type="text" placeholder="search for me" onkeyup="filterPokemonsBySearching()">
+    </header>
+
+    <div id="card-containerId" class="pokemon-cards-container">
+
+    </div>
+    <!-- Spinner -->
+    <div id="loader-container" class="db-none">
+        <div id="loader-bg">
+            <div class="custom-loader">
+
+            </div>
+        </div>
+    </div>
+    <!-- Spinner end -->
+
+    <div onclick="closeDialog()" class="overlay db-none" id="overlayId">
+
+        <div id="dialogId" class="dialog" onclick="doNotClose(event)">
+            <div id="dialog-headerId" class="dialog-header">
+
+            </div>
+            <div class="description-table">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="td-left">Name: </td>
+                            <td id="dialog-pokemon-nameId"></td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">Id: </td>
+                            <td id="dialog-pokemon-Id">
+                            </td>
+                        </tr>
+
+                        <tr id="container-ability-Ids">
+                            <td class="td-left">Abilities:</td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">Height:</td>
+                            <td id="dialog-pokemon-heightId"></td>
+                        </tr>
+                        <tr>
+                            <td class="td-left">Weight:</td>
+                            <td id="dialog-pokemon-weightId"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="progress-bar-container">
+                <div class="progressbar-column">
+                    <span id="span-hp-Id" class="progressbarNumber">0</span>
+                    <div class="progress-bar">
+                        <ul>
+                            <li id="meterId0" class="meter"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+
+                        </ul>
+                    </div>
+                    <span>HP</span>
+                </div>
+                <div class="progressbar-column">
+                    <span id="span-attack-Id" class="progressbarNumber">0</span>
+                    <div class="progress-bar">
+                        <ul>
+                            <li id="meterId1" class="meter"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+
+                        </ul>
+                    </div>
+                    <span>ATTACK</span>
+                </div>
+                <div class="progressbar-column">
+                    <span id="span-defense-Id" class="progressbarNumber">0</span>
+                    <div class="progress-bar">
+                        <ul>
+                            <li id="meterId2" class="meter"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <span>DEFENSE</span>
+                </div>
+                <div class="progressbar-column">
+                    <span id="span-sAttack-Id" class="progressbarNumber">0</span>
+                    <div class="progress-bar">
+                        <ul>
+                            <li id="meterId3" class="meter"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <span>SPEZIAL ATTACK</span>
+                </div>
+                <div class="progressbar-column">
+                    <span id="span-sDefense-Id" class="progressbarNumber">0</span>
+                    <div class="progress-bar">
+                        <ul>
+                            <li id="meterId4" class="meter"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <span>SPEZIAL DEFENSE</span>
+                </div>
+                <div class="progressbar-column">
+                    <span id="span-speed-Id" class="progressbarNumber">0</span>
+                    <div class="progress-bar">
+                        <ul>
+                            <li id="meterId5" class="meter"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <span>SPEED</span>
+                </div>
+            </div>
+
+            <img class="arrow-left" src="img/icons/double-arrow-left.png" alt="" onclick="previousPokemonArrow()">
+            <img class="arrow-right" src="img/icons/double-arrow-right.png" alt="" onclick="nextPokemonArrow()">
+            <img class="icon-close " src="img/icons/x-mark-48.png" alt="" onclick="closeDialog()">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+.bg-grass {
+    background-color: #69b835 !important;
+}
+
+.bg-bug {
+    background-color: #ABC837 !important;
+}
+
+.bg-dark {
+    background-color: #333333 !important;
+}
+
+.bg-dragon {
+    background-color: #9494AC !important;
+}
+
+.bg-electric {
+    background-color: #FFE680 !important;
+    color: black;
+}
+
+.bg-fairy {
+    background-color: #FFD5F6 !important;
+    color: black;
+}
+
+.bg-fighting {
+    background-color: #FFB380 !important;
+}
+
+.bg-fire {
+    background-color: #A02C2C !important;
+}
+
+.bg-flying {
+    background-color: #B7C8B7 !important;
+}
+
+.bg-poison {
+    background-color: #8A6F91 !important;
+}
+
+.bg-ghost {
+    background-color: #3E3748 !important;
+}
+
+.bg-ground {
+    background-color: #F4E3D7 !important;
+    color: black;
+}
+
+.bg-ice {
+    background-color: #D5FFF6 !important;
+    color: black;
+}
+
+.bg-normal {
+    background-color: #cbcbcb !important;
+    color: black;
+}
+
+.bg-psychic {
+    background-color: #C837AB !important;
+
+}
+
+.bg-rock {
+    background-color: #DEAA87 !important;
+
+}
+
+.bg-steel {
+    background-color: #999999 !important;
+
+}
+
+.bg-water {
+    background-color: #0044AA !important;
+}
+
+.bo-grass {
+    border: 6px solid #69b835;
+}
+
+.bo-bug {
+    border: 6px solid #ABC837;
+}
+
+.bo-dark {
+    border: 6px solid #333333;
+}
+
+.bo-dragon {
+    border: 6px solid #9494AC;
+}
+
+.bo-electric {
+    border: 6px solid #FFE680;
+}
+
+.bo-fairy {
+    border: 6px solid #FFD5F6;
+
+}
+
+.bo-fighting {
+    border: 6px solid #FFB380;
+}
+
+.bo-fire {
+    border: 6px solid #A02C2C;
+}
+
+.bo-flying {
+    border: 6px solid #B7C8B7;
+}
+
+.bo-poison {
+    border: 6px solid #8A6F91;
+}
+
+.bo-ghost {
+    border: 6px solid #3E3748;
+}
+
+.bo-ground {
+    border: 6px solid #F4E3D7;
+}
+
+.bo-ice {
+    border: 6px solid #D5FFF6;
+}
+
+.bo-normal {
+    border: 6px solid #F9F9F9;
+}
+
+.bo-psychic {
+    border: 6px solid #C837AB;
+}
+
+.bo-rock {
+    border: 6px solid #DEAA87;
+}
+
+.bo-steel {
+    border: 6px solid #999999;
+}
+
+.bo-water {
+    border: 6px solid #0044AA;
+}

@@ -1,0 +1,197 @@
+@media (max-width:1280px) {
+
+    .description-table {
+        right: -118px;
+    }
+
+    .dialog-header-pokemon {
+        height: 350px;
+    }
+}
+
+
+@media (max-width:1024px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header input {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        width: 250px;
+    }
+
+    header img {
+        width: 300px;
+        margin-left: 0px;
+
+    }
+
+    .description-table {
+        width: 350px;
+        right: 20px;
+        font-size: 14px;
+    }
+
+    #dialog-pokemon-abilitesId {
+        font-size: 12px;
+    }
+
+    .td-left {
+        width: 80px;
+    }
+
+    .dialog-header-pokemon {
+        height: 200px;
+    }
+
+    .progress-bar-container {
+
+        right: calc(50% - 228px);
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .progressbarNumber {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .progressbar-column {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 70px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+
+    .progress-bar {
+        width: 50px;
+        margin-right: 3px;
+        margin-left: 3px;
+        margin-top: 5px;
+        z-index: 0;
+        text-align: center;
+        font-size: 10px !important;
+        color: black;
+    }
+
+}
+
+@media (max-width:767px) {
+
+    .dialog {
+        position: relative;
+        height: 99vh;
+        width: 100vh;
+        background-color: #efefef;
+        color: black;
+        border-radius: 0px;
+        /* border: none; */
+        transform: scaleX(0.0);
+        transition: all 500ms ease-in-out;
+        margin: 0;
+
+    }
+
+    .dialog-header-pokemon {
+        height: 200px;
+    }
+
+    .progress-bar-container {
+        bottom: 100px;
+    }
+
+    .arrow-left {
+        bottom: 35px;
+    }
+
+    .arrow-right {
+        bottom: 35px;
+    }
+
+    .description-table {
+        left: 45px;
+        top: 270px;
+    }
+
+    .dialog-header-pokemon {
+        left: 90px;
+
+    }
+}
+
+@media (max-width:480px) {
+
+
+    header input {
+        width: 200px;
+        font-size: 18px;
+    }
+
+    header img {
+        width: 250px;
+    }
+
+    .description-table {
+        left: 5px;
+    }
+
+    #dialog-pokemon-abilitesId {
+        font-size: 10px;
+    }
+
+    .description-table table tr {
+        margin-bottom: 15px;
+    }
+
+    .dialog-header-pokemon {
+        height: 220px;
+    }
+
+    .progress-bar-container {
+
+        right: calc(50% - 138px);
+        margin: 0;
+        font-size: 8px;
+    }
+
+    .progressbarNumber {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .progressbar-column {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 40px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+
+    .progress-bar {
+        width: 35px;
+        margin-right: 3px;
+        margin-left: 3px;
+        margin-top: 5px;
+        z-index: 0;
+        text-align: center;
+        font-size: 10px !important;
+        color: black;
+    }
+
+    .icon-close {
+        height: 28px;
+        right: 10px;
+        top: 10px;
+
+    }
+
+}
